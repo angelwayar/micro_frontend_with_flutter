@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:login_module/login/presentation/cubit/login_cubit.dart';
-import 'package:login_module/login/presentation/pages/home.page.dart';
 
 class LoginFormWidget extends StatefulWidget {
-  const LoginFormWidget({Key? key}) : super(key: key);
+  final Widget child;
+
+  const LoginFormWidget({Key? key, required this.child}) : super(key: key);
 
   @override
   State<LoginFormWidget> createState() => _LoginFormWidgetState();
@@ -46,7 +47,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => const HomePage(),
+                    builder: (_) => widget.child,
                   ),
                 );
               }

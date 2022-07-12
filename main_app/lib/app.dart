@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:main_app/main_app/presentation/pages/login.page.dart';
+import 'package:login_module/login/presentation/pages/login.page.dart';
+import 'package:main_app/main_app/presentation/pages/home.page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LoginPage(),
+      home: const LoginPage(
+        child: HomePage(),
+      ),
     );
   }
 }

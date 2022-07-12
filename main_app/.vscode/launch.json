@@ -7,7 +7,9 @@
         {
             "name": "main_app",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "flutterMode": "debug",
+            "program": "lib/main.dart"
         },
         {
             "name": "main_app (profile mode)",
